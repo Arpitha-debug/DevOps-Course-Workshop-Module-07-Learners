@@ -26,3 +26,14 @@ jobs:
       working-directory: DotnetTemplate.Web
       run: dotnet run 
       
+    - name: Test Dotnet # Test Dotnet 
+      working-directory: DotnetTemplate.Web
+      run: dotnet test  #This will run the C# tests in the DotnetTemplate.Web.Tests project.
+
+    - name: TypeScript tests # TypeScript tests using Jasmine
+      working-directory: DotnetTemplate.Web
+      run: npm t  #This will run the TypeScript tests in DotnetTemplate.Web/Scripts/spec.
+
+    - name: TypeScript tests # TypeScript tests using Jasmine
+      working-directory: DotnetTemplate.Web
+      run: npm run lint # 

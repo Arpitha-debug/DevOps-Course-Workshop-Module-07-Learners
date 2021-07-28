@@ -10,3 +10,19 @@ jobs:
     
     - name: Hello world       # Name of step
       run: echo 'Hello world' # Command to run
+
+    - name: Build Dotnet 
+      run: dotnet build  #This will build the Csharp code.
+
+    - name: Install npm # Install Node dependencies
+      working-directory: DotnetTemplate.Web
+      run: npm install
+
+    - name: Run Build npm # Run Node 
+      working-directory: DotnetTemplate.Web
+      run: npm run build
+
+    - name: Run Dotnet # Run Dotnet 
+      working-directory: DotnetTemplate.Web
+      run: dotnet run 
+      
